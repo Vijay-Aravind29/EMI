@@ -1,0 +1,39 @@
+{
+  "employees": [
+    {
+      "id": "1",
+      "name": "AravindS",
+      "position": "Software Engineer",
+      "department": "IT",
+      "salary": 80000
+    },
+    {
+      "id": "2",
+      "name": "Vijay",
+      "position": "Software Developer",
+      "department": "IT",
+      "salary": 100000
+    },
+    {
+      "id": "3",
+      "name": "VijayAravind",
+      "position": "Cricketer",
+      "department": "Batter",
+      "salary": 200000
+    },
+    {
+      "id": "5b95",
+      "name": "VA",
+      "position": "Bowler",
+      "department": "Cricket",
+      "salary": 200000
+    },
+    {
+      "id": "8084",
+      "name": "SVA",
+      "position": "All Rounder",
+      "department": "Cricket",
+      "salary": 100000000
+    }
+  ]
+}

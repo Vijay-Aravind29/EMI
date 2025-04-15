@@ -1,0 +1,73 @@
+/* * {
+    margin: 0%;
+    padding: 0%;
+} */
+
+.wrapper {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgb(34, 238, 34),rgb(59, 59, 245),rgb(236, 236, 53)) ;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+
+.container {
+    
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.heading {
+    margin-bottom: 20px;
+    font-size: 25px;
+    color: #333;
+    font-family: 'Nunito', sans-serif;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    background-color: #fff;
+    padding: 8px;
+}
+
+img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-left: 20px;
+    margin-right: 87px;
+    object-fit: cover;
+    font-family: 'Nunito', sans-serif;
+}
+
+
+.name {
+    margin: 10px;
+    font-size: 16px;
+    font-family: 'Nunito', sans-serif;
+}
+
+.age {
+    margin: 0;
+    color: #777;
+    font-family: 'Nunito', sans-serif;
+}
+
+.button {
+    background-color: #ff7f9c;
+    color: #fff;
+    width: 87%;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}

@@ -1,0 +1,80 @@
+/* Styling the container for the table */
+div {
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f4f4f4;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Table row hover effect */
+tr:hover {
+  background-color: #f9f9f9;
+}
+
+/* Styling for action links and buttons */
+td a, td button {
+  padding: 6px 12px;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Edit link style */
+td a {
+  background-color: #4A90E2;
+  color: white;
+}
+
+td a:hover {
+  background-color: #357ABD;
+}
+
+/* Delete button style */
+td button {
+  background-color: chocolate;
+  color: white;
+  border: none;
+  font-size: 1rem;
+}
+
+td button:hover {
+  background-color: brown;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  table {
+    font-size: 14px;
+  }
+
+  th, td {
+    padding: 10px;
+  }
+}
+
+::-webkit-scrollbar{
+  display:none;
+}
+
+
+

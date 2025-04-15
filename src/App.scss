@@ -1,0 +1,117 @@
+// $colorBlack:black;
+// $colorWhite:white;
+// @mixin inputStyle{
+//     padding: 10px;
+//     margin: 10px;
+//     text-align: center;
+//     border: none;
+//     border-bottom: 1px solid #0000ff;
+//     background: $colorBlack;
+//     color: $colorWhite;
+// }
+
+// .App{
+//     height: 100vh;
+//     width: 100%;
+//     background: $colorBlack;
+//     color: $colorWhite;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     form{
+//         height: auto;
+//         width: 300px;
+//         border: 1px solid $colorWhite;
+//         text-align: center;
+//         input{
+//             @include inputStyle();
+//         }
+//     }
+// }
+
+
+@mixin flexProperty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .Sass {
+    height: 100vh;
+    width: 100%;
+    @include flexProperty();
+    background: whitesmoke;
+    .Cards {
+      height: 450px;
+      width: 350px;
+      background: white;
+      box-shadow: 0 0 30px black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+  
+      img {
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        border: 10px solid #ecf0f3;
+      }
+      .logos i {
+        padding: 10px;
+        margin: 10px;
+        border-radius: 50%;
+        background: whitesmoke;
+        box-shadow: 0 0 10px white;
+      }
+      .logos {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+      }
+      i:hover {
+        box-shadow: inset -3px -3px 7px #ffffff, inset 3px 3px 5px #ceced1;
+      }
+      button {
+        height: 50px;
+        width: 120px;
+        margin: 10px;
+        background: #ecf0f3;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 0 10px white;
+        color: #31344b;
+        &:hover {
+          box-shadow: inset -3px -3px 7px #ffffff, inset 3px 3px 5px #ceced1;
+          border: none;
+        }
+      }
+    }
+  }
+  
+  .Card-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    padding: 20px;
+    height: 100px;
+  }
+  
+  .rows:hover {
+    box-shadow: inset -3px -3px 7px #ffffff, inset 3px 3px 5px #ceced1;
+    border: none;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .social-share {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 10px;
+  }
