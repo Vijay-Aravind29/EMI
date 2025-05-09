@@ -17,12 +17,12 @@ const CurrencyConverter = () => {
   const [targetCurrency, setTargetCurrency] = useState('EUR');
   const [availableCurrencies, setAvailableCurrencies] = useState(['USD', 'EUR']); // Default fallback
 
-  // Update available currencies when rates load
+  
   useEffect(() => {
     if (rates) {
       const currencies = Object.keys(rates);
       setAvailableCurrencies(currencies);
-      // Ensure current selections are valid
+      
       if (!currencies.includes(currency)) {
         setCurrency('USD');
       }
@@ -32,7 +32,7 @@ const CurrencyConverter = () => {
     }
   }, [rates, currency, targetCurrency, setCurrency]);
 
-  // Calculate converted amount
+  
   useEffect(() => {
     if (rates && currency && targetCurrency && 
         availableCurrencies.includes(currency) && 
