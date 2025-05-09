@@ -8,7 +8,7 @@ export const AppProvider = ({ children }) => {
   const [currency, setCurrency] = useState('USD');
   const [rates, setRates] = useState({
     USD: 1,
-    EUR: 0.85,  // Default fallback rates
+    EUR: 0.85,  
     GBP: 0.73,
     INR: 82.88
   });
@@ -23,14 +23,14 @@ export const AppProvider = ({ children }) => {
         throw new Error('API key not configured. Please set VITE_API_KEY in your .env file');
       }
 
-      // ✅ ✅ ✅ HERE IS THE FIXED LINK
+    
       const response = await axios.get(
         `https://v6.exchangerate-api.com/v6/7bfe61006a74cddb7f342812/latest/USD`,
         {
           headers: {
             'Content-Type': 'application/json',
           },
-          timeout: 5000 // 5 second timeout
+          
         }
       );
 
@@ -46,7 +46,7 @@ export const AppProvider = ({ children }) => {
                          'Failed to fetch exchange rates. Using fallback rates.';
       setError(errorMessage);
       
-      // Maintain existing rates as fallback
+      
     } finally {
       setLoading(false);
     }
@@ -59,9 +59,9 @@ export const AppProvider = ({ children }) => {
     const fetchWithRetry = async () => {
       try {
         await fetchRates();
-        // Only set interval after successful first fetch if component is still mounted
+        
         if (isMounted) {
-          interval = setInterval(fetchRates, 3600000); // Refresh hourly
+          interval = setInterval(fetchRates, 3600000); 
         }
       } catch (err) {
         console.error('Initial fetch failed, retrying in 30s...');
@@ -87,7 +87,7 @@ export const AppProvider = ({ children }) => {
     
     if (!rates || fromCurrency === toCurrency) return amount;
     
-    // Validate currencies exist in rates
+    
     if (!rates[fromCurrency] || !rates[toCurrency]) {
       console.error(`Missing rates for ${fromCurrency} or ${toCurrency}`);
       return amount;
@@ -96,7 +96,7 @@ export const AppProvider = ({ children }) => {
     try {
       const usdAmount = fromCurrency === 'USD' ? amount : amount / rates[fromCurrency];
       const result = toCurrency === 'USD' ? usdAmount : usdAmount * rates[toCurrency];
-      return parseFloat(result.toFixed(4)); // Return result with 4 decimal places
+      return parseFloat(result.toFixed(4)); 
     } catch (err) {
       console.error('Conversion error:', err);
       return amount;
