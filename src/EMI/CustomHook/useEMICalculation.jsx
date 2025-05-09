@@ -30,7 +30,7 @@ const useEMICalculation = (principal, annualRate, tenureYears) => {
       Math.pow(1 + monthlyRate, tenureMonths) / 
       (Math.pow(1 + monthlyRate, tenureMonths) - 1);
     
-    // Generate amortization schedule
+    
     let balance = principal;
     const schedule = [];
     
