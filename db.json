@@ -17,23 +17,23 @@
     {
       "id": "3",
       "name": "VijayAravind",
-      "position": "Cricketer",
-      "department": "Batter",
+      "position": "Web Designer",
+      "department": "IT",
       "salary": 200000
     },
     {
       "id": "5b95",
-      "name": "VA",
-      "position": "Bowler",
-      "department": "Cricket",
-      "salary": 200000
+      "name": "Aravind Vijay",
+      "position": "React JS Developer",
+      "department": "IT",
+      "salary": 178000
     },
     {
       "id": "8084",
-      "name": "SVA",
-      "position": "All Rounder",
-      "department": "Cricket",
-      "salary": 100000000
+      "name": "S.Vijay Aravind",
+      "position": "Full Stack Developer",
+      "department": "IT",
+      "salary": 110000
     }
   ]
 }

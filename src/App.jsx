@@ -1,27 +1,38 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-import Home from "./Project7 Crud/Home";
-import Create from "./Project7 Crud/Create";
-import Edit from "./Project7 Crud/Edit";
-import "./index.css"
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { ThemeProvider as MuiThemeProvider } from '@mui/material/styles';
+import { AppProvider } from './EMI/ContextAPI/AppContext';
+import { ThemeProvider as CustomThemeProvider } from './EMI/ContextAPI/ThemeContext';
+import Layout from './EMI/Components/Layout';
+import Calculator from './EMI/Pages/Calculator';
+import ExchangeRates from './EMI/Pages/ExchangeRate';
+import About from './EMI/Pages/About';
+import NotFoundPage from './EMI/Components/NotFoundPage';
+import ErrorBoundary from './EMI/Components/ErrorBoundary';
 
-const App = () => {
+function App() {
   return (
-    <BrowserRouter>
-      <div className="p-4">
-        <h1 className="text-2xl font-bold mb-4">Employee Management</h1>
-        <nav className="space-x-4 mb-4">
-          <Link to="/">Home</Link>
-          <Link to="/create">Create</Link>
-        </nav>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/create" element={<Create />} />
-          <Route path="/edit/:id" element={<Edit />} />
-        </Routes>
-      </div>
-    </BrowserRouter>
+    <Router>
+      <CustomThemeProvider>
+        {({ theme }) => (
+          <MuiThemeProvider theme={theme}>
+            <AppProvider>
+              <Layout>
+                <ErrorBoundary>
+                  <Routes>
+                    <Route path="/" element={<Calculator />} />
+                    <Route path="/rates" element={<ExchangeRates />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="*" element={<NotFoundPage />} />
+                  </Routes>
+                </ErrorBoundary>
+              </Layout>
+            </AppProvider>
+          </MuiThemeProvider>
+        )}
+      </CustomThemeProvider>
+    </Router>
   );
-};
+}
 
 export default App;
