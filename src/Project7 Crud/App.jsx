@@ -8,12 +8,12 @@ import "./index.css"
 const App = () => {
   return (
     <BrowserRouter>
-      <div className="container">
-        <h1>Employee Management</h1>
-        <nav>
-          <Link to="/" className="nav-btn">Home</Link>
-          <Link to="/create" className="nav-btn">Create</Link>
-        </nav>  
+      <div className="p-4">
+        <h1 className="text-2xl font-bold mb-4">Employee Management</h1>
+        <nav className="space-x-4 mb-4">
+          <Link to="/">Home</Link>
+          <Link to="/create">Create</Link>
+        </nav>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/create" element={<Create />} />
